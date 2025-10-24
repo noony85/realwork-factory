@@ -13,6 +13,8 @@ namespace realwork.Extensions
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
+            services.AddRouting(options => options.LowercaseUrls = true);
+
             // 리소스 경로 지정
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
